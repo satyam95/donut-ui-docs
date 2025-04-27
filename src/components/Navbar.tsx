@@ -4,12 +4,26 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-white">
-      <div className="container mx-auto flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+      <div className="container mx-auto flex h-14 items-center space-x-4 sm:justify-between sm:space-x-0">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
-            <Donut size={32}/>
+            <Donut size={24} />
             <span className="inline-block font-bold">Donut UI</span>
           </Link>
+          <nav className="flex items-center text-sm gap-4">
+            <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/80"
+              href="/docs/installation"
+            >
+              Docs
+            </Link>
+            <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/80"
+              href="/components"
+            >
+              Components
+            </Link>
+          </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <div className="relative rounded-md shadow-sm hidden sm:flex">
