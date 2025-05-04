@@ -7,7 +7,7 @@ export default function DocsRootLayout({
 }>) {
   return (
     <div className="flex flex-1 container mx-auto">
-      <aside className="w-52 block border-r h-[calc(100vh-4rem)] sticky top-16">
+      <aside className="w-52 hidden sm:block border-r h-[calc(100vh-3.5rem)] sticky top-14">
         <Sidebar />
       </aside>
       <main className="flex-1 bg-white">{children}</main>

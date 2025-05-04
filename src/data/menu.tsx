@@ -1,0 +1,30 @@
+export const gettingStartedItems = [
+  { title: "Introduction", path: "/docs" },
+  { title: "Installation", path: "/docs/installation" },
+];
+
+export const componentsItems = [
+  { title: "Accordion", path: "/components/accordion" },
+  { title: "Alert", path: "/components/alert" },
+  { title: "Avatar", path: "/components/avatar" },
+  { title: "Badge", path: "/components/badge" },
+  { title: "Breadcrumb", path: "/components/breadcrumb" },
+  { title: "Button", path: "/components/button" },
+  { title: "Card", path: "/components/card" },
+  { title: "Checkbox", path: "/components/checkbox" },
+  { title: "Dialog", path: "/components/dialog" },
+  { title: "Dropdown Menu", path: "/components/dropdown-menu" },
+  { title: "Input", path: "/components/input" },
+  { title: "Label", path: "/components/label" },
+  { title: "Radio Group", path: "/components/radio-group" },
+  { title: "Select", path: "/components/select" },
+  { title: "Separator", path: "/components/separator" },
+  { title: "Skeleton", path: "/components/skeleton" },
+  { title: "Switch", path: "/components/switch" },
+  { title: "Table", path: "/components/table" },
+  { title: "Tabs", path: "/components/tabs" },
+  { title: "Textarea", path: "/components/textarea" },
+  { title: "Toast", path: "/components/toast" },
+  { title: "Toggle", path: "/components/toggle" },
+  { title: "Tooltip", path: "/components/tooltip" },
+];
