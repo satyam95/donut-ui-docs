@@ -25,7 +25,9 @@ export async function generateMetadata({
     title,
     description,
     keywords,
-    alternates: { canonical: `https://your-domain.com${canonical}` },
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}${canonical}`,
+    },
     openGraph: {
       type: "website",
       url: openGraph.url,

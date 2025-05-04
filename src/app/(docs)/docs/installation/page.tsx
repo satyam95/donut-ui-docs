@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     "npm install donut-ui",
   ],
   alternates: {
-    canonical: "https://your-domain.com/docs/installation",
+    canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/installation`,
   },
   openGraph: {
-    type: "article",
-    url: "https://your-domain.com/docs/installation",
+    type: "website",
+    url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/installation`,
     title: "Installation Guide | Donut-UI Documentation",
     description:
       "Quickly set up Donut-UI in your React or Next.js project. Follow our step-by-step installation guide to install the package, configure theme colors, and start using components.",
     images: [
       {
-        url: "https://your-domain.com/og-images/installation.png",
+        url: "/vercel-icon.svg",
         width: 1200,
         height: 630,
         alt: "Donut-UI Installation Guide",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Installation Guide | Donut-UI Documentation",
     description:
       "Quickly set up Donut-UI in your React or Next.js project. Follow our step-by-step installation guide to install the package, configure theme colors, and start using components.",
-    images: ["https://your-domain.com/og-images/installation.png"],
+    images: ["/vercel-icon.svg"],
   },
 };
 
@@ -165,7 +165,9 @@ export default function InstallationPage() {
             </p>
           </div>
           <div className="flex item-center justify-start py-8">
-            <Link href="/docs" className="font-bold flex items-center gap-2"><ChevronLeft size={16} className="font-bold" /> Introduction</Link>
+            <Link href="/docs" className="font-bold flex items-center gap-2">
+              <ChevronLeft size={16} className="font-bold" /> Introduction
+            </Link>
           </div>
         </div>
         <div className="w-48 xl:w-60 hidden lg:block h-[calc(100vh-4rem)] sticky top-16">

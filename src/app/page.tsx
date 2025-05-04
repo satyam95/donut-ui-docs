@@ -14,17 +14,17 @@ export const metadata: Metadata = {
     "frontend development",
   ],
   alternates: {
-    canonical: "https://your-domain.com/",
+    canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}`,
   },
   openGraph: {
     type: "website",
-    url: "https://your-domain.com/",
+    url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}`,
     title: "Build Stunning Interfaces with Ease | Donut-UI",
     description:
       "Donut-UI is your all-in-one React component library offering seamless integration with React and Next.js. Start building modern, responsive UIs effortlessly today.",
     images: [
       {
-        url: "https://your-domain.com/og-images/home.png",
+        url: "/vercel-icon.svg",
         width: 1200,
         height: 630,
         alt: "Donut-UI – Build Stunning Interfaces",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Build Stunning Interfaces with Ease | Donut-UI",
     description:
       "Donut-UI is your all-in-one React component library offering seamless integration with React and Next.js. Start building modern, responsive UIs effortlessly today.",
-    images: ["https://your-domain.com/og-images/home.png"],
+    images: ["/vercel-icon.svg"],
   },
 };
 

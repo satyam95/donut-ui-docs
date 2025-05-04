@@ -42,11 +42,11 @@ export const components = [
       ],
       canonical: "/components/accordion",
       openGraph: {
-        url: "https://your-domain.com/components/accordion",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/accordion`,
         title: "Accordion Component | Donut-UI",
         description:
           "Incorporate expandable content sections into your app with Donut-UI's Accordion component, improving user interaction and layout efficiency.",
-        image: "https://your-domain.com/og-images/components/accordion.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -75,11 +75,11 @@ export const components = [
       ],
       canonical: "/components/alert",
       openGraph: {
-        url: "https://your-domain.com/components/alert",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/alert`,
         title: "Alert Component | Donut-UI",
         description:
           "Showcase critical updates and status alerts with Donut-UI's customizable Alert component, tailored to fit your application's requirements.",
-        image: "https://your-domain.com/og-images/components/alert.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -110,11 +110,11 @@ export const components = [
       ],
       canonical: "/components/avatar",
       openGraph: {
-        url: "https://your-domain.com/components/avatar",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/avatar`,
         title: "Avatar Component | Donut-UI",
         description:
           "Improve user interfaces with Donut-UI's Avatar component, offering seamless profile image display and fallback capabilities.",
-        image: "https://your-domain.com/og-images/components/avatar.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -145,11 +145,11 @@ export const components = [
       ],
       canonical: "/components/badge",
       openGraph: {
-        url: "https://your-domain.com/components/badge",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/badge`,
         title: "Badge Component | Donut-UI",
         description:
           "Enhance your UI with Donut-UI's Badge component, perfect for displaying statuses, notifications, or categorizations in a compact form.",
-        image: "https://your-domain.com/og-images/components/badge.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -179,11 +179,11 @@ export const components = [
       ],
       canonical: "/components/breadcrumb",
       openGraph: {
-        url: "https://your-domain.com/components/breadcrumb",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/breadcrumb`,
         title: "Breadcrumb Component | Donut-UI",
         description:
           "Improve navigation and user orientation with Donut-UI's Breadcrumb component, offering a clear path through your application's structure.",
-        image: "https://your-domain.com/og-images/components/breadcrumb.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -213,11 +213,11 @@ export const components = [
       ],
       canonical: "/components/button",
       openGraph: {
-        url: "https://your-domain.com/components/button",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/button`,
         title: "Button Component | Donut-UI",
         description:
           "Build consistent and accessible buttons with Donut-UI's Button component, offering multiple variants and sizes for your projects.",
-        image: "https://your-domain.com/og-images/components/button.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -247,11 +247,11 @@ export const components = [
       ],
       canonical: "/components/card",
       openGraph: {
-        url: "https://your-domain.com/components/card",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/card`,
         title: "Card Component | Donut-UI",
         description:
           "Present content elegantly with Donut-UI's Card component, ideal for grouping related data in headers, content areas, and footers.",
-        image: "https://your-domain.com/og-images/components/card.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -281,11 +281,11 @@ export const components = [
       ],
       canonical: "/components/checkbox",
       openGraph: {
-        url: "https://your-domain.com/components/checkbox",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/checkbox`,
         title: "Checkbox Component | Donut-UI",
         description:
           "Enhance form interactivity with Donut-UI's Checkbox component, allowing users to easily select or deselect options.",
-        image: "https://your-domain.com/og-images/components/checkbox.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -315,11 +315,11 @@ export const components = [
       ],
       canonical: "/components/dialog",
       openGraph: {
-        url: "https://your-domain.com/components/dialog",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/dialog`,
         title: "Dialog Component | Donut-UI",
         description:
           "Engage users with Donut-UI's Dialog component, perfect for modals, alerts, and interactive overlays in your application.",
-        image: "https://your-domain.com/og-images/components/dialog.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -349,11 +349,11 @@ export const components = [
       ],
       canonical: "/components/dropdown-menu",
       openGraph: {
-        url: "https://your-domain.com/components/dropdown-menu",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/dropdown-menu`,
         title: "Dropdown Menu Component | Donut-UI",
         description:
           "Provide users with contextual options using Donut-UI's Dropdown Menu component, triggered by a simple button click.",
-        image: "https://your-domain.com/og-images/components/dropdown-menu.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -383,11 +383,11 @@ export const components = [
       ],
       canonical: "/components/input",
       openGraph: {
-        url: "https://your-domain.com/components/input",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/input`,
         title: "Input Component | Donut-UI",
         description:
           "Capture user data effectively with Donut-UI's Input component, designed for seamless integration and accessibility.",
-        image: "https://your-domain.com/og-images/components/input.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -417,11 +417,11 @@ export const components = [
       ],
       canonical: "/components/label",
       openGraph: {
-        url: "https://your-domain.com/components/label",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/label`,
         title: "Label Component | Donut-UI",
         description:
           "Improve form accessibility and user experience with Donut-UI's Label component, linking text to form controls effectively.",
-        image: "https://your-domain.com/og-images/components/label.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -451,11 +451,11 @@ export const components = [
       ],
       canonical: "/components/radio-group",
       openGraph: {
-        url: "https://your-domain.com/components/radio-group",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/radio-group`,
         title: "Radio Group Component | Donut-UI",
         description:
           "Enable single-choice selections with Donut-UI's Radio Group component, perfect for forms requiring mutually exclusive options.",
-        image: "https://your-domain.com/og-images/components/radio-group.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -485,11 +485,11 @@ export const components = [
       ],
       canonical: "/components/select",
       openGraph: {
-        url: "https://your-domain.com/components/select",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/select`,
         title: "Select Component | Donut-UI",
         description:
           "Facilitate user choices with Donut-UI's Select component, offering a sleek dropdown for selecting options.",
-        image: "https://your-domain.com/og-images/components/select.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -519,11 +519,11 @@ export const components = [
       ],
       canonical: "/components/separator",
       openGraph: {
-        url: "https://your-domain.com/components/separator",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/separator`,
         title: "Separator Component | Donut-UI",
         description:
           "Enhance layout structure with Donut-UI's Separator component, providing clear divisions between content sections.",
-        image: "https://your-domain.com/og-images/components/separator.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -553,11 +553,11 @@ export const components = [
       ],
       canonical: "/components/skeleton",
       openGraph: {
-        url: "https://your-domain.com/components/skeleton",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/skeleton`,
         title: "Skeleton Component | Donut-UI",
         description:
           "Maintain a smooth user experience with Donut-UI's Skeleton component, displaying placeholders while content loads.",
-        image: "https://your-domain.com/og-images/components/skeleton.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -587,11 +587,11 @@ export const components = [
       ],
       canonical: "/components/switch",
       openGraph: {
-        url: "https://your-domain.com/components/switch",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/switch`,
         title: "Switch Component | Donut-UI",
         description:
           "Empower users to toggle settings easily with Donut-UI's Switch component, designed for intuitive interaction.",
-        image: "https://your-domain.com/og-images/components/switch.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -621,11 +621,11 @@ export const components = [
       ],
       canonical: "/components/table",
       openGraph: {
-        url: "https://your-domain.com/components/table",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/table`,
         title: "Table Component | Donut-UI",
         description:
           "Present tabular data seamlessly across devices with Donut-UI's responsive Table component.",
-        image: "https://your-domain.com/og-images/components/table.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -655,11 +655,11 @@ export const components = [
       ],
       canonical: "/components/tabs",
       openGraph: {
-        url: "https://your-domain.com/components/tabs",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/tabs`,
         title: "Tabs Component | Donut-UI",
         description:
           "Streamline content navigation with Donut-UI's Tabs component, offering a clean way to switch between related sections.",
-        image: "https://your-domain.com/og-images/components/tabs.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -689,11 +689,11 @@ export const components = [
       ],
       canonical: "/components/textarea",
       openGraph: {
-        url: "https://your-domain.com/components/textarea",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/textarea`,
         title: "Textarea Component | Donut-UI",
         description:
           "Facilitate detailed user input with Donut-UI's Textarea component, perfect for comments, descriptions, and more.",
-        image: "https://your-domain.com/og-images/components/textarea.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -723,11 +723,11 @@ export const components = [
       ],
       canonical: "/components/toast",
       openGraph: {
-        url: "https://your-domain.com/components/toast",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/toast`,
         title: "Toast Component | Donut-UI",
         description:
           "Keep users informed with Donut-UI's Toast component, delivering brief, auto-dismissing notifications.",
-        image: "https://your-domain.com/og-images/components/toast.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -757,11 +757,11 @@ export const components = [
       ],
       canonical: "/components/toggle",
       openGraph: {
-        url: "https://your-domain.com/components/toggle",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/toggle`,
         title: "Toggle Component | Donut-UI",
         description:
           "Implement straightforward state changes with Donut-UI's Toggle component, ideal for binary settings.",
-        image: "https://your-domain.com/og-images/components/toggle.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {
@@ -791,11 +791,11 @@ export const components = [
       ],
       canonical: "/components/tooltip",
       openGraph: {
-        url: "https://your-domain.com/components/tooltip",
+        url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/components/tooltip`,
         title: "Tooltip Component | Donut-UI",
         description:
           "Provide extra context seamlessly with Donut-UI's Tooltip component, displaying helpful information on interaction.",
-        image: "https://your-domain.com/og-images/components/tooltip.png",
+        image: "/vercel-icon.svg",
       },
     },
     pagination: {

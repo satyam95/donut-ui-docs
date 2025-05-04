@@ -15,17 +15,17 @@ export const metadata: Metadata = {
     "performant components",
   ],
   alternates: {
-    canonical: "https://your-domain.com/docs/introduction",
+    canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/introduction`,
   },
   openGraph: {
     type: "article",
-    url: "https://your-domain.com/docs/introduction",
+    url: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/introduction`,
     title: "Introduction to Donut-UI | Documentation",
     description:
       "Welcome to Donut-UI: learn how our React & Next.js component library accelerates development with 20+ accessible, customizable, and high-performance UI building blocks.",
     images: [
       {
-        url: "https://your-domain.com/og-images/introduction.png",
+        url: "/vercel-icon.svg",
         width: 1200,
         height: 630,
         alt: "Donut-UI Introduction",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Introduction to Donut-UI | Documentation",
     description:
       "Welcome to Donut-UI: learn how our React & Next.js component library accelerates development with 20+ accessible, customizable, and high-performance UI building blocks.",
-    images: ["https://your-domain.com/og-images/introduction.png"],
+    images: ["/vercel-icon.svg"],
   },
 };
 
@@ -119,11 +119,21 @@ export default function IntroductionPage() {
               Key Features
             </h2>
             <ol className="space-y-2 list-disc ml-4 mb-4">
-              <li className="text-sm sm:text-base">Prebuilt, reusable components to accelerate development.</li>
-              <li className="text-sm sm:text-base">Customizable themes for brand alignment.</li>
-              <li className="text-sm sm:text-base">Optimized for React and Next.js applications.</li>
-              <li className="text-sm sm:text-base">Fully documented and developer-friendly.</li>
-              <li className="text-sm sm:text-base">Lightweight and performant for modern web applications.</li>
+              <li className="text-sm sm:text-base">
+                Prebuilt, reusable components to accelerate development.
+              </li>
+              <li className="text-sm sm:text-base">
+                Customizable themes for brand alignment.
+              </li>
+              <li className="text-sm sm:text-base">
+                Optimized for React and Next.js applications.
+              </li>
+              <li className="text-sm sm:text-base">
+                Fully documented and developer-friendly.
+              </li>
+              <li className="text-sm sm:text-base">
+                Lightweight and performant for modern web applications.
+              </li>
             </ol>
             <p className="text-sm sm:text-base">
               Whether you’re an individual developer or part of a team, Donut-UI
@@ -133,7 +143,12 @@ export default function IntroductionPage() {
             </p>
           </div>
           <div className="flex item-center justify-end py-8">
-            <Link href="/docs/installation" className="font-bold flex items-center gap-2">Installation <ChevronRight size={16} className="font-bold" /></Link>
+            <Link
+              href="/docs/installation"
+              className="font-bold flex items-center gap-2"
+            >
+              Installation <ChevronRight size={16} className="font-bold" />
+            </Link>
           </div>
         </div>
         <div className="w-48 xl:w-60 hidden lg:block h-[calc(100vh-4rem)] sticky top-16">
