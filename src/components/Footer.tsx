@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="text-balance text-sm leading-5 sm:leading-7 text-center">
           Built by{" "}
           <a
-            href="#"
+            href="https://satyam95.vercel.app/"
             target="_blank"
             rel="noreferrer"
             className="font-bold underline underline-offset-4"
@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
           . The source code is available on{" "}
           <a
-            href="#"
+            href="https://github.com/satyam95/donut"
             target="_blank"
             rel="noreferrer"
             className="font-bold underline underline-offset-4"

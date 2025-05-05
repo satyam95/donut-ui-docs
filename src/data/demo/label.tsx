@@ -1,5 +1,5 @@
-import { Checkbox } from "donut-ui";
-import { Label } from "donut-ui";
+import { Checkbox } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
 
 export function LabelDemo() {
   return (

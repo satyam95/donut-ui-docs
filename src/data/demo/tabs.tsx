@@ -1,4 +1,4 @@
-import { Button } from "donut-ui";
+import { Button } from "@satyam95/donutui";
 import {
   Card,
   CardContent,
@@ -6,61 +6,89 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "donut-ui";
-import { Input } from "donut-ui";
-import { Label } from "donut-ui";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "donut-ui";
+} from "@satyam95/donutui";
+import { Input } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@satyam95/donutui";
 
 export function TabsDemo() {
   return (
-    <Tabs defaultValue="account" className="w-[400px]">
+    <Tabs defaultValue="login" className="w-[400px]">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+        <TabsTrigger value="login">Login</TabsTrigger>
+        <TabsTrigger value="register">Register</TabsTrigger>
       </TabsList>
-      <TabsContent value="account">
+      <TabsContent value="login">
         <Card>
           <CardHeader>
-            <CardTitle>Account</CardTitle>
+            <CardTitle>Login</CardTitle>
             <CardDescription>
-              Make changes to your account here. Click save when you're done.
+              Access your account by entering your credentials below.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-2">
+          <CardContent className="space-y-4">
             <div className="space-y-1">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" defaultValue="Pedro Duarte" />
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="yourname@example.com"
+              />
             </div>
             <div className="space-y-1">
-              <Label htmlFor="username">Username</Label>
-              <Input id="username" defaultValue="@peduarte" />
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              />
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save changes</Button>
+            <Button>Login</Button>
           </CardFooter>
         </Card>
       </TabsContent>
-      <TabsContent value="password">
+      <TabsContent value="register">
         <Card>
           <CardHeader>
-            <CardTitle>Password</CardTitle>
+            <CardTitle>Register</CardTitle>
             <CardDescription>
-              Change your password here. After saving, you'll be logged out.
+              Create a new account to get started.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-2">
+          <CardContent className="space-y-4">
             <div className="space-y-1">
-              <Label htmlFor="current">Current password</Label>
-              <Input id="current" type="password" />
+              <Label htmlFor="fullName">Full Name</Label>
+              <Input id="fullName" type="text" placeholder="John Doe" />
             </div>
             <div className="space-y-1">
-              <Label htmlFor="new">New password</Label>
-              <Input id="new" type="password" />
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="yourname@example.com"
+              />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Create a password"
+              />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="confirmPassword">Confirm Password</Label>
+              <Input
+                id="confirmPassword"
+                type="password"
+                placeholder="Re-enter your password"
+              />
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Save password</Button>
+            <Button>Register</Button>
           </CardFooter>
         </Card>
       </TabsContent>

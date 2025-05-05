@@ -1,20 +1,21 @@
 "use client";
 
-import { Button } from "donut-ui";
-import { toast } from "donut-ui";
+import { Button } from "@satyam95/donutui";
+import { toast } from "@satyam95/donutui";
 
 export function ToastDemo() {
   return (
     <Button
       variant="outline"
       onClick={() =>
-        toast("Event has been created", {
-          description: "Sunday, December 03, 2023 at 9:00 AM",
+        toast("Meeting Scheduled", {
+          description:
+            "Your meeting with John Doe is scheduled for Monday, May 08, 2025, at 10:00 AM.",
           action: {
-            label: "Undo",
-            onClick: () => console.log("Undo"),
+            label: "Reschedule",
+            onClick: () => console.log("Reschedule clicked"),
           },
-          duration: 2000,
+          duration: 3000,
         })
       }
     >

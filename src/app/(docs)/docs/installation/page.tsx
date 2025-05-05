@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-const install = `npm install donut-ui
+const install = `npm i @satyam95/donutui
 `;
 
 const css = `:root {
@@ -62,7 +62,7 @@ const css = `:root {
 }
 `;
 
-const example = `import { Button } from "donut-ui";
+const example = `import { Button } from "@satyam95/donutui";
 
 function App() {
   return <Button>Default Button</Button>;

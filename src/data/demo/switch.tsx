@@ -1,11 +1,11 @@
-import { Label } from "donut-ui";
-import { Switch } from "donut-ui";
+import { Label } from "@satyam95/donutui";
+import { Switch } from "@satyam95/donutui";
 
 export function SwitchDemo() {
   return (
     <div className="flex items-center space-x-2">
-      <Switch id="airplane-mode" />
-      <Label htmlFor="airplane-mode">Airplane Mode</Label>
+      <Switch id="notifications" />
+      <Label htmlFor="notifications">Enable Notifications</Label>
     </div>
   );
 }

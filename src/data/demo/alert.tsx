@@ -1,13 +1,13 @@
-import { Alert, AlertDescription, AlertTitle } from "donut-ui";
-import { Terminal } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@satyam95/donutui";
+import { Info } from "lucide-react";
 
 export function AlertDemo() {
   return (
     <Alert>
-      <Terminal className="h-4 w-4" />
-      <AlertTitle>Heads up!</AlertTitle>
+      <Info className="h-4 w-4" />
+      <AlertTitle>Important Notice</AlertTitle>
       <AlertDescription>
-        You can add components to your app using the cli.
+        Your subscription is about to expire. Renew now to avoid interruptions.
       </AlertDescription>
     </Alert>
   );

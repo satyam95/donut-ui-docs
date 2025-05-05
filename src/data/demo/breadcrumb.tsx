@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "donut-ui";
+} from "@satyam95/donutui";
 
 export function BreadcrumbDemo() {
   return (

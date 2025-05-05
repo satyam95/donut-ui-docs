@@ -1,10 +1,10 @@
-import { Button } from "donut-ui";
+import { Button } from "@satyam95/donutui";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "donut-ui";
+} from "@satyam95/donutui";
 
 export function TooltipDemo() {
   return (

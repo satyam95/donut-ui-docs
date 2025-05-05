@@ -25,6 +25,7 @@ export async function generateMetadata({
     title,
     description,
     keywords,
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}`),
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}${canonical}`,
     },

@@ -54,7 +54,43 @@ export const components = [
     },
     preview: {
       component: <AccordionDemo />,
-      code: 'import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "donut-ui";\n\nfunction App() {\n  return (\n    <Accordion>\n      <AccordionItem value="item-1">\n        <AccordionTrigger>Section 1</AccordionTrigger>\n        <AccordionContent>Content for section 1</AccordionContent>\n      </AccordionItem>\n      <AccordionItem value="item-2">\n        <AccordionTrigger>Section 2</AccordionTrigger>\n        <AccordionContent>Content for section 2</AccordionContent>\n      </AccordionItem>\n    </Accordion>\n  );\n}\n\nexport default App;',
+      code: `import {
+        Accordion,
+        AccordionContent,
+        AccordionItem,
+        AccordionTrigger,
+      } from "@satyam95/donutui";
+      
+      export function AccordionDemo() {
+        return (
+          <Accordion type="single" className="w-full">
+            <AccordionItem id="item-1">
+              <AccordionTrigger>
+                What is the purpose of this product?
+              </AccordionTrigger>
+              <AccordionContent>
+                It helps streamline workflows and improve team collaboration
+                effectively.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem id="item-2">
+              <AccordionTrigger>What are the main features?</AccordionTrigger>
+              <AccordionContent>
+                Features include real-time collaboration, analytics, and tool
+                integrations.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem id="item-3">
+              <AccordionTrigger>How secure is the platform?</AccordionTrigger>
+              <AccordionContent>
+                The platform uses encryption, multi-factor authentication, and
+                complies with GDPR.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        );
+      }
+      `,
     },
   },
   {
@@ -88,7 +124,21 @@ export const components = [
     },
     preview: {
       component: <AlertDemo />,
-      code: 'import { Alert, AlertTitle, AlertDescription } from "donut-ui";\n\nfunction App() {\n  return (\n    <Alert variant="success">\n      <AlertTitle>Success</AlertTitle>\n      <AlertDescription>Operation completed successfully!</AlertDescription>\n    </Alert>\n  );\n}\n\nexport default App;',
+      code: `import { Alert, AlertDescription, AlertTitle } from "@satyam95/donutui";
+import { Info } from "lucide-react";
+
+export function AlertDemo() {
+  return (
+    <Alert>
+      <Info className="h-4 w-4" />
+      <AlertTitle>Important Notice</AlertTitle>
+      <AlertDescription>
+        Your subscription is about to expire. Renew now to avoid interruptions.
+      </AlertDescription>
+    </Alert>
+  );
+}
+`,
     },
   },
   {
@@ -123,7 +173,19 @@ export const components = [
     },
     preview: {
       component: <AvatarDemo />,
-      code: 'import { Avatar, AvatarImage, AvatarFallback } from "donut-ui";\n\nfunction App() {\n  return (\n    <Avatar>\n      <AvatarImage src="path/to/image.jpg" alt="User" />\n      <AvatarFallback>JD</AvatarFallback>\n    </Avatar>\n  );\n}\n\nexport default App;',
+      code: `import { Avatar, AvatarFallback, AvatarImage } from "@satyam95/donutui";
+      
+export function AvatarDemo() {
+  return (
+    <Avatar>
+      <AvatarImage
+        src="https://placehold.co/150"
+        alt="John Doe Profile Picture"
+      />
+      <AvatarFallback>JD</AvatarFallback>
+    </Avatar>
+  );
+}`,
     },
   },
   {
@@ -158,7 +220,11 @@ export const components = [
     },
     preview: {
       component: <BadgeDemo />,
-      code: 'import { Badge } from "donut-ui";\n\nfunction App() {\n  return <Badge variant="primary">New</Badge>;\n}\n\nexport default App;',
+      code: `import { Badge } from "@satyam95/donutui";
+      
+export function BadgeDemo() {
+  return <Badge>Badge</Badge>;
+}`,
     },
   },
   {
@@ -192,7 +258,38 @@ export const components = [
     },
     preview: {
       component: <BreadcrumbDemo />,
-      code: 'import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "donut-ui";\n\nfunction App() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbItem>\n        <BreadcrumbLink href="/">Home</BreadcrumbLink>\n      </BreadcrumbItem>\n      <BreadcrumbItem>\n        <BreadcrumbLink>Category</BreadcrumbLink>\n      </BreadcrumbItem>\n    </Breadcrumb>\n  );\n}\n\nexport default App;',
+      code: `import {
+        Breadcrumb,
+        BreadcrumbEllipsis,
+        BreadcrumbItem,
+        BreadcrumbLink,
+        BreadcrumbList,
+        BreadcrumbPage,
+        BreadcrumbSeparator,
+      } from "@satyam95/donutui";
+      
+      export function BreadcrumbDemo() {
+        return (
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbEllipsis />
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/docs/components">Components</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        );
+      }
+      `,
     },
   },
   {
@@ -226,7 +323,11 @@ export const components = [
     },
     preview: {
       component: <ButtonDemo />,
-      code: 'import { Button } from "donut-ui";\n\nfunction App() {\n  return <Button variant="primary">Click Me</Button>;\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui"
+       
+export function ButtonDemo() {
+  return <Button>Button</Button>
+}`,
     },
   },
   {
@@ -260,7 +361,63 @@ export const components = [
     },
     preview: {
       component: <CardDemo />,
-      code: 'import { Card, CardHeader, CardContent, CardFooter } from "donut-ui";\n\nfunction App() {\n  return (\n    <Card>\n      <CardHeader>Header</CardHeader>\n      <CardContent>Content</CardContent>\n      <CardFooter>Footer</CardFooter>\n    </Card>\n  );\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@satyam95/donutui";
+import { Input } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@satyam95/donutui";
+      
+export function CardDemo() {
+  return (
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>Create a Blog</CardTitle>
+        <CardDescription>Launch your personal blog in minutes.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Blog Name</Label>
+              <Input id="name" placeholder="e.g., Tech Insights" />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="framework">Preferred Platform</Label>
+              <Select>
+                <SelectTrigger id="framework">
+                  <SelectValue placeholder="Choose a platform" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="next">Next.js</SelectItem>
+                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
+                  <SelectItem value="astro">Astro</SelectItem>
+                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline">Reset</Button>
+        <Button>Launch Blog</Button>
+      </CardFooter>
+    </Card>
+  );
+}`,
     },
   },
   {
@@ -294,7 +451,21 @@ export const components = [
     },
     preview: {
       component: <CheckboxDemo />,
-      code: 'import { Checkbox } from "donut-ui";\n\nfunction App() {\n  return <Checkbox label="Accept terms" />;\n}\n\nexport default App;',
+      code: `import { Checkbox } from "@satyam95/donutui";
+      
+export function CheckboxDemo() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </label>
+    </div>
+  );
+}`,
     },
   },
   {
@@ -328,7 +499,63 @@ export const components = [
     },
     preview: {
       component: <DialogDemo />,
-      code: 'import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "donut-ui";\n\nfunction App() {\n  return (\n    <Dialog>\n      <DialogTrigger>Open Dialog</DialogTrigger>\n      <DialogContent>\n        <DialogHeader>\n          <DialogTitle>Title</DialogTitle>\n          <DialogDescription>Description</DialogDescription>\n        </DialogHeader>\n      </DialogContent>\n    </Dialog>\n  );\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@satyam95/donutui";
+import { Input } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+      
+export function DialogDemo() {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline">Edit Profile</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Edit Profile</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+              Name
+            </Label>
+            <Input
+              id="name"
+              defaultValue="Pedro Duarte"
+              className="col-span-3"
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="username" className="text-right">
+              Username
+            </Label>
+            <Input
+              id="username"
+              defaultValue="@peduarte"
+              className="col-span-3"
+              placeholder="Enter your username"
+            />
+          </div>
+        </div>
+        <DialogFooter>
+          <Button type="submit">Save Changes</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}`,
     },
   },
   {
@@ -362,7 +589,86 @@ export const components = [
     },
     preview: {
       component: <DropdownMenuDemo />,
-      code: 'import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "donut-ui";\n\nfunction App() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger>Menu</DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuItem>Option 1</DropdownMenuItem>\n        <DropdownMenuItem>Option 2</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@satyam95/donutui";
+      
+export function DropdownMenuDemo() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Menu</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>Dashboard</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>
+            Profile
+            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            Notifications
+            <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            Activity Logs
+            <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            Preferences
+            <DropdownMenuShortcut>⌘P</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>Team Management</DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>Invite Members</DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>By Email</DropdownMenuItem>
+                <DropdownMenuItem>By SMS</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Generate Invite Link</DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
+          <DropdownMenuItem>
+            Create New Team
+            <DropdownMenuShortcut>⌘T</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuGroup>
+          <DropdownMenuItem>Integrations</DropdownMenuItem>
+          <DropdownMenuItem>API Settings</DropdownMenuItem>
+          <DropdownMenuItem>
+            Help Center
+            <DropdownMenuShortcut>⌘H</DropdownMenuShortcut>
+          </DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          Log Out
+          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}`,
     },
   },
   {
@@ -396,7 +702,13 @@ export const components = [
     },
     preview: {
       component: <InputDemo />,
-      code: 'import { Input } from "donut-ui";\n\nfunction App() {\n  return <Input placeholder="Enter text" type="text" />;\n}\n\nexport default App;',
+      code: `import { Input } from "@satyam95/donutui";
+      
+export function InputDemo() {
+  return (
+    <Input type="email" placeholder="Email Address" className="max-w-md" />
+  );
+}`,
     },
   },
   {
@@ -430,7 +742,19 @@ export const components = [
     },
     preview: {
       component: <LabelDemo />,
-      code: 'import { Label } from "donut-ui";\n\nfunction App() {\n  return <Label htmlFor="input-id">Username</Label>;\n}\n\nexport default App;',
+      code: `import { Checkbox } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+      
+export function LabelDemo() {
+  return (
+    <div>
+      <div className="flex items-center space-x-2">
+        <Checkbox id="terms" />
+        <Label htmlFor="terms">Accept terms and conditions</Label>
+      </div>
+    </div>
+  );
+}`,
     },
   },
   {
@@ -464,7 +788,27 @@ export const components = [
     },
     preview: {
       component: <RadioGroupDemo />,
-      code: 'import { RadioGroup, RadioGroupItem } from "donut-ui";\n\nfunction App() {\n  return (\n    <RadioGroup defaultValue="option1">\n      <RadioGroupItem value="option1">Option 1</RadioGroupItem>\n      <RadioGroupItem value="option2">Option 2</RadioGroupItem>\n    </RadioGroup>\n  );\n}\n\nexport default App;',
+      code: `import { RadioGroup, RadioGroupItem } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+      
+export function RadioGroupDemo() {
+  return (
+    <RadioGroup defaultValue="system">
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="light" id="r1" />
+        <Label htmlFor="r1">Light Mode</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="dark" id="r2" />
+        <Label htmlFor="r2">Dark Mode</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="system" id="r3" />
+        <Label htmlFor="r3">System Default</Label>
+      </div>
+    </RadioGroup>
+  );
+}`,
     },
   },
   {
@@ -498,7 +842,35 @@ export const components = [
     },
     preview: {
       component: <SelectDemo />,
-      code: 'import { Select, SelectTrigger, SelectContent, SelectItem } from "donut-ui";\n\nfunction App() {\n  return (\n    <Select>\n      <SelectTrigger>Select an option</SelectTrigger>\n      <SelectContent>\n        <SelectItem value="option1">Option 1</SelectItem>\n        <SelectItem value="option2">Option 2</SelectItem>\n      </SelectContent>\n    </Select>\n  );\n}\n\nexport default App;',
+      code: `import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@satyam95/donutui";
+      
+export function SelectDemo() {
+  return (
+    <Select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select a country" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Countries</SelectLabel>
+          <SelectItem value="usa">United States</SelectItem>
+          <SelectItem value="canada">Canada</SelectItem>
+          <SelectItem value="uk">United Kingdom</SelectItem>
+          <SelectItem value="germany">Germany</SelectItem>
+          <SelectItem value="australia">Australia</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  );
+}`,
     },
   },
   {
@@ -532,7 +904,30 @@ export const components = [
     },
     preview: {
       component: <SeparatorDemo />,
-      code: 'import { Separator } from "donut-ui";\n\nfunction App() {\n  return <Separator orientation="horizontal" />;\n}\n\nexport default App;',
+      code: `import { Separator } from "@satyam95/donutui";
+      
+export function SeparatorDemo() {
+  return (
+    <div>
+      <div className="space-y-1">
+        <h4 className="text-sm font-medium leading-none">DonutUI Components</h4>
+        <p className="text-sm text-muted-foreground">
+          A modern, open-source UI component library for building dynamic interfaces.
+        </p>
+      </div>
+      <Separator className="my-4" />
+      <div className="flex h-5 items-center space-x-4 text-sm">
+        <div>Home</div>
+        <Separator orientation="vertical" />
+        <div>About</div>
+        <Separator orientation="vertical" />
+        <div>Contact</div>
+        <Separator orientation="vertical" />
+        <div>GitHub</div>
+      </div>
+    </div>
+  );
+}`,
     },
   },
   {
@@ -566,7 +961,23 @@ export const components = [
     },
     preview: {
       component: <SkeletonDemo />,
-      code: 'import { Skeleton } from "donut-ui";\n\nfunction App() {\n  return <Skeleton width="100%" height="20px" />;\n}\n\nexport default App;',
+      code: `import { Skeleton } from "@satyam95/donutui";
+      
+  export function SkeletonDemo() {
+    return (
+      <div className="flex flex-col items-center space-y-4 p-4 border rounded-lg shadow-md w-[200px]">
+        <Skeleton className="h-[100px] w-full rounded-md" />
+        <div className="space-y-2 w-full">
+          <Skeleton className="h-6 w-3/4" />
+          <Skeleton className="h-4 w-1/2" />
+        </div>
+        <div className="flex space-x-2 w-full">
+          <Skeleton className="h-8 w-1/2 rounded-md" />
+          <Skeleton className="h-8 w-1/2 rounded-md" />
+        </div>
+      </div>
+    );
+  }`,
     },
   },
   {
@@ -600,7 +1011,17 @@ export const components = [
     },
     preview: {
       component: <SwitchDemo />,
-      code: 'import { Switch } from "donut-ui";\n\nfunction App() {\n  return <Switch defaultChecked />;\n}\n\nexport default App;',
+      code: `import { Label } from "@satyam95/donutui";
+import { Switch } from "@satyam95/donutui";
+      
+export function SwitchDemo() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Switch id="notifications" />
+      <Label htmlFor="notifications">Enable Notifications</Label>
+    </div>
+  );
+}`,
     },
   },
   {
@@ -634,7 +1055,102 @@ export const components = [
     },
     preview: {
       component: <TableDemo />,
-      code: 'import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "donut-ui";\n\nfunction App() {\n  return (\n    <Table>\n      <TableHeader>\n        <TableRow>\n          <TableHead>Header 1</TableHead>\n          <TableHead>Header 2</TableHead>\n        </TableRow>\n      </TableHeader>\n      <TableBody>\n        <TableRow>\n          <TableCell>Cell 1</TableCell>\n          <TableCell>Cell 2</TableCell>\n        </TableRow>\n      </TableBody>\n    </Table>\n  );\n}\n\nexport default App;',
+      code: `import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@satyam95/donutui";
+      
+const topRunScorers = [
+  {
+    player: "Virat Kohli",
+    team: "Royal Challengers Bangalore",
+    matches: 16,
+    runs: 870,
+    highestScore: "121*",
+  },
+  {
+    player: "David Warner",
+    team: "Delhi Capitals",
+    matches: 15,
+    runs: 815,
+    highestScore: "108*",
+  },
+  {
+    player: "Jos Buttler",
+    team: "Rajasthan Royals",
+    matches: 16,
+    runs: 780,
+    highestScore: "95",
+  },
+  {
+    player: "Shubman Gill",
+    team: "Gujarat Titans",
+    matches: 14,
+    runs: 730,
+    highestScore: "99",
+  },
+  {
+    player: "KL Rahul",
+    team: "Lucknow Super Giants",
+    matches: 15,
+    runs: 695,
+    highestScore: "105",
+  },
+  {
+    player: "Ruturaj Gaikwad",
+    team: "Chennai Super Kings",
+    matches: 14,
+    runs: 680,
+    highestScore: "92",
+  },
+  {
+    player: "Suryakumar Yadav",
+    team: "Mumbai Indians",
+    matches: 16,
+    runs: 675,
+    highestScore: "110*",
+  },
+];
+      
+export function TableDemo() {
+  return (
+    <Table>
+      <TableCaption>Top Run-Scorers in IPL 2025</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-[200px]">Player</TableHead>
+          <TableHead>Team</TableHead>
+          <TableHead>Matches</TableHead>
+          <TableHead>Runs</TableHead>
+          <TableHead className="text-right">Highest Score</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {topRunScorers.map((scorer, index) => (
+          <TableRow key={index}>
+            <TableCell className="font-medium">{scorer.player}</TableCell>
+            <TableCell>{scorer.team}</TableCell>
+            <TableCell>{scorer.matches}</TableCell>
+            <TableCell>{scorer.runs}</TableCell>
+            <TableCell className="text-right">{scorer.highestScore}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      <TableFooter>
+        <TableRow>
+          <TableCell colSpan={4}>Total Runs Scored by Top Players</TableCell>
+          <TableCell className="text-right">5,245</TableCell>
+        </TableRow>
+      </TableFooter>
+    </Table>
+  );
+}`,
     },
   },
   {
@@ -668,7 +1184,103 @@ export const components = [
     },
     preview: {
       component: <TabsDemo />,
-      code: 'import { Tabs, TabsList, TabsTrigger, TabsContent } from "donut-ui";\n\nfunction App() {\n  return (\n    <Tabs defaultValue="tab1">\n      <TabsList>\n        <TabsTrigger value="tab1">Tab 1</TabsTrigger>\n        <TabsTrigger value="tab2">Tab 2</TabsTrigger>\n      </TabsList>\n      <TabsContent value="tab1">Content 1</TabsContent>\n      <TabsContent value="tab2">Content 2</TabsContent>\n    </Tabs>\n  );\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@satyam95/donutui";
+import { Input } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@satyam95/donutui";
+      
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="login" className="w-[400px]">
+      <TabsList className="grid w-full grid-cols-2">
+        <TabsTrigger value="login">Login</TabsTrigger>
+        <TabsTrigger value="register">Register</TabsTrigger>
+      </TabsList>
+      <TabsContent value="login">
+        <Card>
+          <CardHeader>
+            <CardTitle>Login</CardTitle>
+            <CardDescription>
+              Access your account by entering your credentials below.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-1">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="yourname@example.com"
+              />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button>Login</Button>
+          </CardFooter>
+        </Card>
+      </TabsContent>
+      <TabsContent value="register">
+        <Card>
+          <CardHeader>
+            <CardTitle>Register</CardTitle>
+            <CardDescription>
+              Create a new account to get started.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-1">
+              <Label htmlFor="fullName">Full Name</Label>
+              <Input id="fullName" type="text" placeholder="John Doe" />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="yourname@example.com"
+              />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Create a password"
+              />
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="confirmPassword">Confirm Password</Label>
+              <Input
+                id="confirmPassword"
+                type="password"
+                placeholder="Re-enter your password"
+              />
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button>Register</Button>
+          </CardFooter>
+        </Card>
+      </TabsContent>
+    </Tabs>
+  );
+}`,
     },
   },
   {
@@ -702,7 +1314,11 @@ export const components = [
     },
     preview: {
       component: <TextareaDemo />,
-      code: 'import { Textarea } from "donut-ui";\n\nfunction App() {\n  return <Textarea placeholder="Enter your message" />;\n}\n\nexport default App;',
+      code: `import { Textarea } from "@satyam95/donutui";
+      
+export function TextareaDemo() {
+  return <Textarea placeholder="Type your message here." />;
+}`,
     },
   },
   {
@@ -736,7 +1352,31 @@ export const components = [
     },
     preview: {
       component: <ToastDemo />,
-      code: 'import { Toast, ToastProvider, ToastViewport } from "donut-ui";\n\nfunction App() {\n  return (\n    <ToastProvider>\n      <Toast>\n        <Toast.Title>Success</Toast.Title>\n        <Toast.Description>Action completed</Toast.Description>\n      </Toast>\n      <ToastViewport />\n    </ToastProvider>\n  );\n}\n\nexport default App;',
+      code: `"use client";
+      
+import { Button } from "@satyam95/donutui";
+import { toast } from "@satyam95/donutui";
+      
+export function ToastDemo() {
+  return (
+    <Button
+      variant="outline"
+      onClick={() =>
+        toast("Meeting Scheduled", {
+          description:
+            "Your meeting with John Doe is scheduled for Monday, May 08, 2025, at 10:00 AM.",
+          action: {
+            label: "Reschedule",
+            onClick: () => console.log("Reschedule clicked"),
+          },
+          duration: 3000,
+        })
+      }
+    >
+      Show Toast
+    </Button>
+  );
+}`,
     },
   },
   {
@@ -770,7 +1410,16 @@ export const components = [
     },
     preview: {
       component: <ToggleDemo />,
-      code: 'import { Toggle } from "donut-ui";\n\nfunction App() {\n  return <Toggle>Toggle</Toggle>;\n}\n\nexport default App;',
+      code: `import { Bold } from "lucide-react";
+import { Toggle } from "@satyam95/donutui";
+
+export function ToggleDemo() {
+  return (
+    <Toggle aria-label="Toggle italic">
+      <Bold className="h-4 w-4" />
+    </Toggle>
+  );
+}`,
     },
   },
   {
@@ -803,7 +1452,28 @@ export const components = [
     },
     preview: {
       component: <TooltipDemo />,
-      code: 'import { Tooltip, TooltipTrigger, TooltipContent } from "donut-ui";\n\nfunction App() {\n  return (\n    <Tooltip>\n      <TooltipTrigger>Hover me</TooltipTrigger>\n      <TooltipContent>Tooltip text</TooltipContent>\n    </Tooltip>\n  );\n}\n\nexport default App;',
+      code: `import { Button } from "@satyam95/donutui";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@satyam95/donutui";
+      
+export function TooltipDemo() {
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          <Button variant="outline">Hover</Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Add to library</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+}`,
     },
   },
 ];

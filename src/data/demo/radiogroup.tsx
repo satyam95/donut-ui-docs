@@ -1,20 +1,20 @@
-import { Label } from "donut-ui";
-import { RadioGroup, RadioGroupItem } from "donut-ui";
+import { RadioGroup, RadioGroupItem } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
 
 export function RadioGroupDemo() {
   return (
-    <RadioGroup defaultValue="comfortable">
+    <RadioGroup defaultValue="system">
       <div className="flex items-center space-x-2">
-        <RadioGroupItem value="default" id="r1" />
-        <Label htmlFor="r1">Default</Label>
+        <RadioGroupItem value="light" id="r1" />
+        <Label htmlFor="r1">Light Mode</Label>
       </div>
       <div className="flex items-center space-x-2">
-        <RadioGroupItem value="comfortable" id="r2" />
-        <Label htmlFor="r2">Comfortable</Label>
+        <RadioGroupItem value="dark" id="r2" />
+        <Label htmlFor="r2">Dark Mode</Label>
       </div>
       <div className="flex items-center space-x-2">
-        <RadioGroupItem value="compact" id="r3" />
-        <Label htmlFor="r3">Compact</Label>
+        <RadioGroupItem value="system" id="r3" />
+        <Label htmlFor="r3">System Default</Label>
       </div>
     </RadioGroup>
   );

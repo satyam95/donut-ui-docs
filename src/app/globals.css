@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-@source "../../node_modules/donut-ui/dist/**/*.{js,ts,jsx,tsx}";
+@source "../../node_modules/@satyam95/donutui/dist*.{js,ts,jsx,tsx}";
 
 @theme {
   --color-background: oklch(1 0 0);

@@ -1,4 +1,4 @@
-import { Button } from "donut-ui";
+import { Button } from "@satyam95/donutui";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "donut-ui";
-import { Input } from "donut-ui";
-import { Label } from "donut-ui";
+} from "@satyam95/donutui";
+import { Input } from "@satyam95/donutui";
+import { Label } from "@satyam95/donutui";
 
 export function DialogDemo() {
   return (
@@ -19,7 +19,7 @@ export function DialogDemo() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Edit Profile</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you're done.
           </DialogDescription>
@@ -29,17 +29,27 @@ export function DialogDemo() {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input
+              id="name"
+              defaultValue="Pedro Duarte"
+              className="col-span-3"
+              placeholder="Enter your full name"
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
               Username
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input
+              id="username"
+              defaultValue="@peduarte"
+              className="col-span-3"
+              placeholder="Enter your username"
+            />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button type="submit">Save Changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

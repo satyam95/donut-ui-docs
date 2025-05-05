@@ -69,7 +69,7 @@ const Navbar = () => {
               </div>
             </div>
             <a
-              href="https://github.com"
+              href="https://github.com/satyam95/donut"
               target="_blank"
               rel="noreferrer"
               className="p-2"

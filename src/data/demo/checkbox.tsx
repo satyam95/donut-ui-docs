@@ -1,4 +1,4 @@
-import { Checkbox } from "donut-ui"
+import { Checkbox } from "@satyam95/donutui";
 
 export function CheckboxDemo() {
   return (
@@ -11,5 +11,5 @@ export function CheckboxDemo() {
         Accept terms and conditions
       </label>
     </div>
-  )
+  );
 }

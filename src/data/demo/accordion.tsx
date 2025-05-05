@@ -3,28 +3,32 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "donut-ui";
+} from "@satyam95/donutui";
 
 export function AccordionDemo() {
   return (
     <Accordion type="single" className="w-full">
       <AccordionItem id="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionTrigger>
+          What is the purpose of this product?
+        </AccordionTrigger>
         <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
+          It helps streamline workflows and improve team collaboration
+          effectively.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem id="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionTrigger>What are the main features?</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+          Features include real-time collaboration, analytics, and tool
+          integrations.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem id="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionTrigger>How secure is the platform?</AccordionTrigger>
         <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you prefer.
+          The platform uses encryption, multi-factor authentication, and
+          complies with GDPR.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
