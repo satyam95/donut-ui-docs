@@ -3,29 +3,62 @@ import SidebarCTA from "@/components/SidebarCTA";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
 import { components } from "@/data/components";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
+import type { Metadata, ResolvingMetadata } from "next";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { slug } = await params;
   const component = components.find((c) => c.slug === slug);
 
-  if (!component || !component.metadata) {
+  if (!component?.metadata) {
     return { title: "Component | Donut-UI" };
   }
 
   const { title, description, keywords, canonical, openGraph } =
     component.metadata;
 
+  const parentMeta = await parent;
+  const prevImages = parentMeta.openGraph?.images ?? [];
+
+  type OGDescriptor = {
+    url: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+  };
+
+  const prevDescriptors: OGDescriptor[] = (
+    Array.isArray(prevImages) ? prevImages : [prevImages]
+  )
+    .filter(Boolean)
+    .map((img) => {
+      if (typeof img === "string") {
+        return { url: img };
+      }
+      if (img instanceof URL) {
+        return { url: img.toString() };
+      }
+      return img as OGDescriptor;
+    });
+
+  const fullOGImages: OGDescriptor[] = openGraph.image
+    ? [{ url: openGraph.image, width: 1200, height: 630 }, ...prevDescriptors]
+    : prevDescriptors;
+
+  const twitterImages = fullOGImages.map((d) => d.url);
+
   return {
     title,
     description,
     keywords,
-    metadataBase: new URL(`${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}`),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_NEXTJS_SITE_URL!),
     alternates: {
       canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}${canonical}`,
     },
@@ -34,15 +67,13 @@ export async function generateMetadata({
       url: openGraph.url,
       title: openGraph.title,
       description: openGraph.description,
-      images: openGraph.image
-        ? [{ url: openGraph.image, width: 1200, height: 630 }]
-        : undefined,
+      images: fullOGImages,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: openGraph.image ? [openGraph.image] : [],
+      images: twitterImages,
     },
   };
 }
@@ -50,7 +81,7 @@ export async function generateMetadata({
 export default async function ComponentPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const component = components.find((c) => c.slug === slug);
@@ -122,12 +153,12 @@ export default async function ComponentPage({
                   component.pagination.next && component.pagination.previous
                     ? "justify-between"
                     : component.pagination.next &&
-                      !component.pagination.previous
-                    ? "justify-end"
-                    : !component.pagination.next &&
-                      component.pagination.previous
-                    ? "justify-start"
-                    : ""
+                        !component.pagination.previous
+                      ? "justify-end"
+                      : !component.pagination.next &&
+                          component.pagination.previous
+                        ? "justify-start"
+                        : ""
                 }`}
               >
                 {component.pagination.previous && (

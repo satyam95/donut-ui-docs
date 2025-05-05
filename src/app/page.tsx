@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "responsive design",
     "frontend development",
   ],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_NEXTJS_SITE_URL!),
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}`,
   },

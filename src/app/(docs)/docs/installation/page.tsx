@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Next.js UI library install",
     "npm install donut-ui",
   ],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_NEXTJS_SITE_URL!),
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/installation`,
   },

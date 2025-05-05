@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "accessible UI",
     "performant components",
   ],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_NEXTJS_SITE_URL!),
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_NEXTJS_SITE_URL}/docs/introduction`,
   },
